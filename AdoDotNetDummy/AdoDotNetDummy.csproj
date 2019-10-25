@@ -170,6 +170,9 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="WebForms\BankTransferApp.aspx" />
+    <Content Include="WebForms\BulkCopy.aspx" />
+    <Content Include="WebForms\BulkCopyNotifier.aspx" />
     <Content Include="WebForms\CallingProcedure1.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
@@ -180,8 +183,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <Content Include="WebForms\Data.xml" />
     <Content Include="WebForms\MultipleResultSetsRead.aspx" />
     <Content Include="WebForms\SqlDataReaderReadMethodSample.aspx" />
+    <Content Include="WebForms\StronglyTypedDataSet.aspx" />
+    <Content Include="WebForms\TabledataCopySqlBulk.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -230,6 +236,17 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="WebForms\StudentDataSet.xsc">
+      <DependentUpon>StudentDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="WebForms\StudentDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="WebForms\StudentDataSet.xss">
+      <DependentUpon>StudentDataSet.xsd</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\AddPhoneNumber.aspx.cs">
@@ -348,6 +365,27 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="WebForms\BankTransferApp.aspx.cs">
+      <DependentUpon>BankTransferApp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\BankTransferApp.aspx.designer.cs">
+      <DependentUpon>BankTransferApp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\BulkCopy.aspx.cs">
+      <DependentUpon>BulkCopy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\BulkCopy.aspx.designer.cs">
+      <DependentUpon>BulkCopy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\BulkCopyNotifier.aspx.cs">
+      <DependentUpon>BulkCopyNotifier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\BulkCopyNotifier.aspx.designer.cs">
+      <DependentUpon>BulkCopyNotifier.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForms\CallingProcedure1.aspx.cs">
       <DependentUpon>CallingProcedure1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -416,6 +454,25 @@
     </Compile>
     <Compile Include="WebForms\SqlDataReaderReadMethodSample.aspx.designer.cs">
       <DependentUpon>SqlDataReaderReadMethodSample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\StronglyTypedDataSet.aspx.cs">
+      <DependentUpon>StronglyTypedDataSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\StronglyTypedDataSet.aspx.designer.cs">
+      <DependentUpon>StronglyTypedDataSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\StudentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\TabledataCopySqlBulk.aspx.cs">
+      <DependentUpon>TabledataCopySqlBulk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\TabledataCopySqlBulk.aspx.designer.cs">
+      <DependentUpon>TabledataCopySqlBulk.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
